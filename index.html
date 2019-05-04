@@ -6,7 +6,19 @@
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <style>
+         /* Always set the map height explicitly to define the size of the div
+        * element that contains the map. */
+         #map {
+             height: 100%;
+         }
+         /* Optional: Makes the sample page fill the window. */
+         html, body {
+             height: 100%;
+             margin: 0;
+             padding: 0;
+         }
+    </style>
     <!-- Title -->
     <title>Rehomes - Real Estate HTML Template</title>
 
@@ -24,9 +36,10 @@
         <div class="loader"></div>
     </div>
 
-    
 
-        <!-- Main Header Start -->
+
+    <!-- Main Header Start -->
+    <header>
         <div class="main-header-area animated">
             <div class="classy-nav-container breakpoint-off">
                 <div class="container">
@@ -47,7 +60,7 @@
                             <div class="classycloseIcon">
                                 <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
                             </div>
-                            
+
                         </div>
                     </nav>
                 </div>
@@ -55,17 +68,54 @@
         </div>
     </header>
     <!-- **** Header Area End **** -->
-
     <!-- **** Welcome Maps Area Start **** -->
-    <div class="welcome-area wow fadeInUp" data-wow-delay="200ms">
-        <div class="google-maps">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17107.2892861271!2d-74.01626372475907!3d40.714272545051664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sbd!4v1551762805743" allowfullscreen></iframe>
+    <div class="welcome-area wow fadeInUp" data-wow-delay="200ms" style="visibility: visible; animation-delay: 200ms; animation-name: fadeInUp;">
+        <div id="map">
         </div>
     </div>
+    <script>
+        // Note: This example requires that you consent to location sharing when
+        // prompted by your browser. If you see the error "The Geolocation service
+        // failed.", it means you probably did not give permission for the browser to
+        // locate you.
+        var map, infoWindow;
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: { lat: -34.397, lng: 150.644 },
+                zoom: 9
+            });
+            infoWindow = new google.maps.InfoWindow;
+
+            // Try HTML5 geolocation.
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function (position) {
+                    var pos = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
+                    };
+
+                    infoWindow.setPosition(pos);
+                    infoWindow.setContent('Location found.');
+                    infoWindow.open(map);
+                    map.setCenter(pos);
+                }, function () {
+                    handleLocationError(true, infoWindow, map.getCenter());
+                });
+            } else {
+                // Browser doesn't support Geolocation
+                handleLocationError(false, infoWindow, map.getCenter());
+            }
+        }
+
+        function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+            infoWindow.setPosition(pos);
+            infoWindow.setContent(browserHasGeolocation ?
+                'Error: The Geolocation service failed.' :
+                'Error: Your browser doesn\'t support geolocation.');
+            infoWindow.open(map);
+        }
+    </script>
     <!-- **** Welcome Maps Area End **** -->
-
-   
-
     <!-- **** Sale area Start **** -->
     <section class="rehome-house-sale-area section-padding-100-60">
         <div class="container">
@@ -323,7 +373,6 @@
         </div>
     </section>
     <!-- **** Sale Area End **** -->
-
     <!-- **** Choose Us Area Start **** -->
     <section class="rehomes-choose-us-area section-padding-100-60">
         <div class="container">
@@ -375,19 +424,10 @@
         </div>
     </section>
     <!-- **** Choose Us Area End **** -->
-
-    
-
-   
-
-    
-
-    
-
     <!-- **** Footer Area Start **** -->
     <footer class="footer-area bg-img bg-overlay-2 section-padding-100-0" style="background-image: url(img/bg-img/17.jpg);">
-        
-        
+
+
 
         <!-- Copywrite Area -->
         <div class="copywrite-content">
@@ -396,9 +436,12 @@
                     <!-- Copywrite Text -->
                     <div class="col-12 col-sm-6">
                         <div class="copywrite-text">
-                            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                            <p>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Copyright &copy;
+                                <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            </p>
                         </div>
                     </div>
 
@@ -419,7 +462,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         </div>
     </footer>
     <!-- **** Footer Area End **** -->
-
     <!-- **** All JS Files ***** -->
     <!-- jQuery 2.2.4 -->
     <script src="js/jquery.min.js"></script>
@@ -431,6 +473,11 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="js/rehomes.bundle.js"></script>
     <!-- Active -->
     <script src="js/default-assets/active.js"></script>
+    <!--Map Geotagging-->
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUVBCgZDU5DDVg1G4MAtPMZbrF6DpEU2w&callback=initMap">
+    </script>
+
 
 </body>
 

@@ -713,13 +713,9 @@ input:invalid {
   @media only screen and (max-width: 767px) {
     .welcome-area {
       height: 380px; } }
-  .welcome-area .google-maps {
+  .welcome-area .map {
     width: 100%;
     height: 100%; }
-    .welcome-area .google-maps iframe {
-      width: 100%;
-      height: 100%;
-      border: none; }
 
 /* :: 09.0 Search Area CSS */
 .nice-select .list {
