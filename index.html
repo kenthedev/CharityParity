@@ -116,6 +116,29 @@
         }
     </script>
     <!-- **** Welcome Maps Area End **** -->
+    <!-- **** Submission Box **** -->
+    <fieldset id='submission'>
+    <legend>Event Details</legend>
+    <p>
+    	<label>Date and Time</label><br>
+    	    <input type="text" id="datetime12" data-format="DD-MM-YYYY h:mm a" data-template="DD / MM / YYYY 
+    	        hh : mm a" name="datetime" placeholder="DD-MM-YYYY h:mm a">
+    	<script>
+    	$(function(){
+        	$('#datetime12').combodate();  
+    	});
+    	</script>
+    </p>
+    <p>
+    	<label>Location</label><br>
+    		<input type='text' id='location' placeholder='Street Intersection'>
+    </p>
+    <p>
+    	<label>Special Instructions</label><br>
+    		<input type='text' id='instructions' placeholder='Landmarks'>
+    </p>
+    </fieldset>
+    
     <!-- **** Sale area Start **** -->
     <section class="rehome-house-sale-area section-padding-100-60">
         <div class="container">
