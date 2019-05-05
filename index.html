@@ -80,10 +80,32 @@
         // locate you.
         var map, infoWindow;
         function initMap() {
+            var FreshGrocer = { lat: 39.954411, lng: -75.203018 }
+            var TraderJoes = { lat: 39.954250, lng: -75.176361 }
+            var ElTaco = { lat: 39.960650, lng: -75.189180 }
             map = new google.maps.Map(document.getElementById('map'), {
                 center: { lat: 95.7129, lng: 37.0902 },
-                zoom: 17
+                zoom: 15
             });
+
+            var marker = new google.maps.Marker({
+                position: FreshGrocer,
+                map: map,
+                title: 'Hello World!'
+            });
+
+            var marker = new google.maps.Marker({
+                position: TraderJoes,
+                map: map,
+                title: 'Hello World!'
+            });
+
+            var marker = new google.maps.Marker({
+                position: ElTaco,
+                map: map,
+                title: 'Hello World!'
+            });
+
             infoWindow = new google.maps.InfoWindow;
 
             // Try HTML5 geolocation.
@@ -117,44 +139,44 @@
     </script>
     <!-- **** Welcome Maps Area End **** -->
     <!-- **** Submission Box **** -->
-    <fieldset id='submission'>
-    <legend>Event Details</legend>
-    <p>
-    	<label >Date and Time</label><br>
-    	    <input type="text" id="datetime12" data-format="DD-MM-YYYY h:mm a" data-template="DD / MM / YYYY 
+    <div id="submitCalendar">
+        <fieldset id='submission'>
+            <legend>Event Details</legend>
+            <p>
+                <label>Date and Time</label><br>
+                <input type="text" id="datetime12" data-format="DD-MM-YYYY h:mm a" data-template="DD / MM / YYYY
     	        hh : mm a" name="datetime" placeholder="DD-MM-YYYY h:mm a">
-    	<script>
-    	$(function(){
-        	$('#datetime12').combodate();  
-    	});
-    	</script>
-    </p>
-    <p>
-    	<label>Location</label><br>
-    		<input type='text' id='location' placeholder='Street Intersection'>
-    </p>
-    <p>
-    	<label>Special Instructions</label><br>
-    		<input type='text' id='instructions' placeholder='Landmarks'>
-    </p>
-    <button id='submit'>Submit</button>
-    </fieldset>
-    <!-- **** Submission Box End **** -->
-    <br>
-    
-    <!-- **** Calendar **** -->
-    <iframe src="https://calendar.google.com/calendar/embed?src=en.usa%23holiday%40group.v.calendar.google.com&ctz=America%2FNew_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no" align='center'></iframe>
-    
+                <script>
+                    $(function () {
+                        $('#datetime12').combodate();
+                    });
+                </script>
+            </p>
+            <p>
+                <label>Location</label><br>
+                <input type='text' id='location' placeholder='Street Intersection'>
+            </p>
+            <p>
+                <label>Special Instructions</label><br>
+                <input type='text' id='instructions' placeholder='Landmarks'>
+            </p>
+            <button id='submit'>Submit</button>
+        </fieldset>
+
+        <!-- **** Submission Box End **** -->
+        <!-- **** Calendar **** -->
+        <div class="formbox">
+            <iframe src="https://calendar.google.com/calendar/embed?src=en.usa%23holiday%40group.v.calendar.google.com&ctz=America%2FNew_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no" align='center'></iframe>
+        </div>
+    </div>
     <!-- **** Calendar End **** -->
-    
-    
     <!-- **** Sale area Start **** -->
     <section class="rehome-house-sale-area section-padding-100-60">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="section-heading text-center wow fadeInUp" data-wow-delay="200ms">
-                        <h2>Find Donors Near You </h2>
+                        <h2>This Months Top Picks</h2>
                     </div>
                 </div>
 
@@ -167,39 +189,38 @@
                             <div class="property-thumb">
                                 <img src="img/bg-img/1.jpg" alt="">
                             </div>
-                            </div>
+                        </div>
 
-                            <!-- Property Description -->
-                            <div class="property-desc-area">
-                                <!-- Property Title & Seller -->
-                                <div class="property-title-seller d-flex justify-content-between">
-                                    <!-- Title -->
-                                    <div class="property-title">
-                                        <h4>7660 Nikolaus Burg</h4>
-                                        <p><i class="fa fa-map-marker" aria-hidden="true"></i> GA 125, Newyork</p>
-                                    </div>
-                                    <!-- Seller -->
-                                    <div class="property-seller">
-                                        <p>Seller:</p>
-                                        <h6>Alex Cross</h6>
-                                    </div>
+                        <!-- Property Description -->
+                        <div class="property-desc-area">
+                            <!-- Property Title & Seller -->
+                            <div class="property-title-seller d-flex justify-content-between">
+                                <!-- Title -->
+                                <div class="property-title">
+                                    <h4>Fresh Grocers</h4>
+                                    <p><i class="fa fa-map-marker" aria-hidden="true"></i> 4001 Walnut St, Philadelphia</p>
                                 </div>
-                                <!-- Property Info -->
-                                <div class="property-info-area d-flex flex-wrap">
-                                    <p>Sqft: <span>1420 m2</span></p>
-                                    <p>Garage: <span>2</span></p>
-                                    <p>Baths: <span>05</span></p>
-                                    <p>Baths: <span>06</span></p>
+                                <!-- Seller -->
+                                <div class="property-seller">
+                                    <p>Business:</p>
+                                    <h6>Grocery Store</h6>
                                 </div>
                             </div>
-
-                            <!-- Property Price -->
-                            <div class="property-price">
-                                <p class="badge-rent">For Rent</p>
-                                <p class="price">$1,599/month</p>
+                            <!-- Property Info -->
+                            <div class="property-info-area d-flex flex-wrap">
+                                <p>Products: <span>Poultry, Dairy</span></p>
+                                <p>Date: <span>05/09/19</span></p>
+                                <p>Time: <span>11:00AM - 3:00PM</span></p>
                             </div>
                         </div>
+
+                        <!-- Property Price -->
+                        <div class="property-price">
+                            <p class="badge-rent">RSVP</p>
+                            <p class="price">Volunteer</p>
+                        </div>
                     </div>
+                </div>
 
                 <!-- Single Property Area -->
                 <div class="col-12 col-md-6 col-lg-4">
@@ -210,38 +231,37 @@
                             <div class="property-thumb">
                                 <img src="img/bg-img/2.jpg" alt="">
                             </div>
-                            </div>
-                            <!-- Property Description -->
-                            <div class="property-desc-area">
-                                <!-- Property Title & Seller -->
-                                <div class="property-title-seller d-flex justify-content-between">
-                                    <!-- Title -->
-                                    <div class="property-title">
-                                        <h4>736 Hauck Alley</h4>
-                                        <p><i class="fa fa-map-marker" aria-hidden="true"></i> GA 125, Newyork</p>
-                                    </div>
-                                    <!-- Seller -->
-                                    <div class="property-seller">
-                                        <p>Seller:</p>
-                                        <h6>Alex Cross</h6>
-                                    </div>
+                        </div>
+                        <!-- Property Description -->
+                        <div class="property-desc-area">
+                            <!-- Property Title & Seller -->
+                            <div class="property-title-seller d-flex justify-content-between">
+                                <!-- Title -->
+                                <div class="property-title">
+                                    <h4>Trader Joe's</h4>
+                                    <p><i class="fa fa-map-marker" aria-hidden="true"></i> 2121 Market St, Philadelphia</p>
                                 </div>
-                                <!-- Property Info -->
-                                <div class="property-info-area d-flex flex-wrap">
-                                    <p>Sqft: <span>1420 m2</span></p>
-                                    <p>Garage: <span>2</span></p>
-                                    <p>Baths: <span>05</span></p>
-                                    <p>Baths: <span>06</span></p>
+                                <!-- Seller -->
+                                <div class="property-seller">
+                                    <p>Business:</p>
+                                    <h6>Grocery Store</h6>
                                 </div>
                             </div>
-
-                            <!-- Property Price -->
-                            <div class="property-price">
-                                <p class="badge-sale">For Rent</p>
-                                <p class="price">$2,120.000</p>
+                            <!-- Property Info -->
+                            <div class="property-info-area d-flex flex-wrap">
+                                <p>Products: <span>Fruits, Vegetables</span></p>
+                                <p>Date: <span>05/12/19</span></p>
+                                <p>Time: <span>1:00PM - 5:00PM</span></p>
                             </div>
                         </div>
+
+                        <!-- Property Price -->
+                        <div class="property-price">
+                            <p class="badge-sale">For Rent</p>
+                            <p class="price">$2,120.000</p>
+                        </div>
                     </div>
+                </div>
 
                 <!-- Single Property Area -->
                 <div class="col-12 col-md-6 col-lg-4">
@@ -250,44 +270,43 @@
                         <div class="w3-light-grey">
                             <div class="w3-container w3-yellow w3-center" style="width:65%"><img src="star.png" alt="*" style="width:25px;height:25px;padding:0px">475 </div> <!-- Rating bar-->
                             <div class="property-thumb">
-                                <img src="img/bg-img/3.jpeg" alt="">
-                            </div>
-                            </div>
-
-                            <!-- Property Description -->
-                            <div class="property-desc-area">
-                                <!-- Property Title & Seller -->
-                                <div class="property-title-seller d-flex justify-content-between">
-                                    <!-- Title -->
-                                    <div class="property-title">
-                                        <h4>170 Center Park</h4>
-                                        <p><i class="fa fa-map-marker" aria-hidden="true"></i> GA 125, Newyork</p>
-                                    </div>
-                                    <!-- Seller -->
-                                    <div class="property-seller">
-                                        <p>Seller:</p>
-                                        <h6>Jared Tyler</h6>
-                                    </div>
-                                </div>
-                                <!-- Property Info -->
-                                <div class="property-info-area d-flex flex-wrap">
-                                    <p>Sqft: <span>1420 m2</span></p>
-                                    <p>Garage: <span>2</span></p>
-                                    <p>Baths: <span>05</span></p>
-                                    <p>Baths: <span>06</span></p>
-                                </div>
-                            </div>
-
-                            <!-- Property Price -->
-                            <div class="property-price">
-                                <p class="badge-rent">Donation</p>
-                                <p class="price">Free</p>
+                                <img src="img/bg-img/3.jpeg">
                             </div>
                         </div>
+
+                        <!-- Property Description -->
+                        <div class="property-desc-area">
+                            <!-- Property Title & Seller -->
+                            <div class="property-title-seller d-flex justify-content-between">
+                                <!-- Title -->
+                                <div class="property-title">
+                                    <h4>El Taco</h4>
+                                    <p><i class="fa fa-map-marker" aria-hidden="true"></i> 3233 Powelton Ave, Philadelphia</p>
+                                </div>
+                                <!-- Seller -->
+                                <div class="property-seller">
+                                    <p>Business:</p>
+                                    <h6>Restaurant</h6>
+                                </div>
+                            </div>
+                            <!-- Property Info -->
+                            <div class="property-info-area d-flex flex-wrap">
+                                <p>Products: <span>Vegetables</span></p>
+                                <p>Date: <span>05/11/19</span></p>
+                                <p>Time: <span>5:00PM - 7:00PM</span></p>
+                            </div>
+                        </div>
+
+                        <!-- Property Price -->
+                        <div class="property-price">
+                            <p class="badge-rent">Donation</p>
+                            <p class="price">Free</p>
+                        </div>
                     </div>
+                </div>
                 <div class="col-12">
                     <div class="section-heading text-center wow fadeInUp" data-wow-delay="200ms">
-                        <h2>Feeling Hungry?</h2>
+                        <h2>Events Near You</h2>
                     </div>
                 </div>
                 <!-- Single Property Area -->
@@ -300,38 +319,38 @@
                             <div class="property-thumb">
                                 <img src="img/bg-img/4.jpg" alt="">
                             </div>
-                            </div>
-                            <!-- Property Description -->
-                            <div class="property-desc-area">
-                                <!-- Property Title & Seller -->
-                                <div class="property-title-seller d-flex justify-content-between">
-                                    <!-- Title -->
-                                    <div class="property-title">
-                                        <h4>58 Treutel Shores</h4>
-                                        <p><i class="fa fa-map-marker" aria-hidden="true"></i> GA 125, Newyork</p>
-                                    </div>
-                                    <!-- Seller -->
-                                    <div class="property-seller">
-                                        <p>Seller:</p>
-                                        <h6>Alex Cross</h6>
-                                    </div>
+                        </div>
+                        <!-- Property Description -->
+                        <div class="property-desc-area">
+                            <!-- Property Title & Seller -->
+                            <div class="property-title-seller d-flex justify-content-between">
+                                <!-- Title -->
+                                <div class="property-title">
+                                    <h4>Sabrina's Cafe</h4>
+                                    <p><i class="fa fa-map-marker" aria-hidden="true"></i> 227 N 34th St, Philadelphia</p>
                                 </div>
-                                <!-- Property Info -->
-                                <div class="property-info-area d-flex flex-wrap">
-                                    <p>Sqft: <span>1420 m2</span></p>
-                                    <p>Garage: <span>2</span></p>
-                                    <p>Baths: <span>05</span></p>
-                                    <p>Baths: <span>06</span></p>
+                                <!-- Seller -->
+                                <div class="property-seller">
+                                    <p>Business:</p>
+                                    <h6>Restaurant</h6>
                                 </div>
                             </div>
-
-                            <!-- Property Price -->
-                            <div class="property-price">
-                                <p class="badge-sale">For Rent</p>
-                                <p class="price">$2,120.000</p>
+                            <!-- Property Info -->
+                            <div class="property-info-area d-flex flex-wrap">
+                                <p>Products: <span>Eggs, Bread</span></p>
+                                <p>Date: <span>05/07/19</span></p>
+                                <p>Time: <span>3:00PM - 5:00PM</span></p>
+                                <p>Distance: <span>.5 Miles</span></p>
                             </div>
                         </div>
+
+                        <!-- Property Price -->
+                        <div class="property-price">
+                            <p class="badge-sale">For Rent</p>
+                            <p class="price">$2,120.000</p>
+                        </div>
                     </div>
+                </div>
 
                 <!-- Single Property Area -->
                 <div class="col-12 col-md-6 col-lg-4">
@@ -350,21 +369,21 @@
                             <div class="property-title-seller d-flex justify-content-between">
                                 <!-- Title -->
                                 <div class="property-title">
-                                    <h4>8332 Ramiro Village</h4>
-                                    <p><i class="fa fa-map-marker" aria-hidden="true"></i> GA 125, Newyork</p>
+                                    <h4>Drexel Pizza</h4>
+                                    <p><i class="fa fa-map-marker" aria-hidden="true"></i> 107 N 33rd St, Philadelphia</p>
                                 </div>
                                 <!-- Seller -->
                                 <div class="property-seller">
-                                    <p>Seller:</p>
-                                    <h6>Alex Cross</h6>
+                                    <p>Business</p>
+                                    <h6>Restaurant</h6>
                                 </div>
                             </div>
                             <!-- Property Info -->
                             <div class="property-info-area d-flex flex-wrap">
-                                <p>Sqft: <span>1420 m2</span></p>
-                                <p>Garage: <span>2</span></p>
-                                <p>Baths: <span>05</span></p>
-                                <p>Baths: <span>06</span></p>
+                                <p>Products: <span>Vegetables</span></p>
+                                <p>Date <span>05/10/19</span></p>
+                                <p>Time: <span>6:00PM - 9:00PM</span></p>
+                                <p>Distance: <span>.2 Miles</span></p>
                             </div>
                         </div>
 
@@ -385,39 +404,39 @@
                             <div class="property-thumb">
                                 <img src="img/bg-img/6.jpg" alt="">
                             </div>
-                            </div>
+                        </div>
 
-                            <!-- Property Description -->
-                            <div class="property-desc-area">
-                                <!-- Property Title & Seller -->
-                                <div class="property-title-seller d-flex justify-content-between">
-                                    <!-- Title -->
-                                    <div class="property-title">
-                                        <h4>221 Leann Suite 473</h4>
-                                        <p><i class="fa fa-map-marker" aria-hidden="true"></i> GA 125, Newyork</p>
-                                    </div>
-                                    <!-- Seller -->
-                                    <div class="property-seller">
-                                        <p>Seller:</p>
-                                        <h6>Alex Cross</h6>
-                                    </div>
+                        <!-- Property Description -->
+                        <div class="property-desc-area">
+                            <!-- Property Title & Seller -->
+                            <div class="property-title-seller d-flex justify-content-between">
+                                <!-- Title -->
+                                <div class="property-title">
+                                    <h4>Old Nelson</h4>
+                                    <p><i class="fa fa-map-marker" aria-hidden="true"></i> 3438-3448 Lancaster Ave, Philadelphia</p>
                                 </div>
-                                <!-- Property Info -->
-                                <div class="property-info-area d-flex flex-wrap">
-                                    <p>Sqft: <span>1420 m2</span></p>
-                                    <p>Garage: <span>2</span></p>
-                                    <p>Baths: <span>05</span></p>
-                                    <p>Baths: <span>06</span></p>
+                                <!-- Seller -->
+                                <div class="property-seller">
+                                    <p>Business:</p>
+                                    <h6>Grocey Store/Deli</h6>
                                 </div>
                             </div>
-
-                            <!-- Property Price -->
-                            <div class="property-price">
-                                <p class="badge-rent">For Rent</p>
-                                <p class="price">$1,599/month</p>
+                            <!-- Property Info -->
+                            <div class="property-info-area d-flex flex-wrap">
+                                <p>Products: <span>Vegetables, Deli Meats</span></p>
+                                <p>Date: <span>05/11/19</span></p>
+                                <p>Time: <span>9:00AM - 11:00AM</span></p>
+                                <p>Distance: <span>.2 Miles</span></p>
                             </div>
                         </div>
+
+                        <!-- Property Price -->
+                        <div class="property-price">
+                            <p class="badge-rent">For Rent</p>
+                            <p class="price">$1,599/month</p>
+                        </div>
                     </div>
+                </div>
 
             </div>
         </div>
