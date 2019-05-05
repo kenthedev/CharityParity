@@ -2857,4 +2857,14 @@ input:invalid {
   .rehomes-property-sidebar-area .property-search-form-area .slider-range .ui-slider-horizontal .ui-slider-handle {
     margin-left: 0; }
 
+/*# Additions*/
+.w3-blue, .w3-hover-blue:hover {
+    color: #fff !important;
+    background-color: #2196F3 !important
+}
+.w3-yellow, .w3-hover-yellow:hover {
+    color: #000 !important;
+    background-color: #ffeb3b !important
+}
+
 /*# sourceMappingURL=style.css.map */
