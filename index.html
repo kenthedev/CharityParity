@@ -83,20 +83,16 @@
             var FreshGrocer = { lat: 39.954411, lng: -75.203018 }
             var TraderJoes = { lat: 39.954250, lng: -75.176361 }
             var ElTaco = { lat: 39.960650, lng: -75.189180 }
-            var Sabrinas = { lat: 39.957850, lng: -75.191050 }
-            var drexelP = { lat: 39.957960, lng: -75.188930 }
-            var oldN = { lat: 39.963090, lng: -75.202230 }
             map = new google.maps.Map(document.getElementById('map'), {
                 center: { lat: 95.7129, lng: 37.0902 },
                 zoom: 15
             });
+
             var marker = new google.maps.Marker({
                 position: FreshGrocer,
                 map: map,
                 title: 'Hello World!'
             });
-           
-           
 
             var marker = new google.maps.Marker({
                 position: TraderJoes,
@@ -109,23 +105,6 @@
                 map: map,
                 title: 'Hello World!'
             });
-
-            var marker = new google.maps.Marker({
-                position: Sabrinas,
-                map: map,
-                title: 'Hello World!'
-            });
-            var marker = new google.maps.Marker({
-                position: drexelP,
-                map: map,
-                title: 'Hello World!'
-            });
-            var marker = new google.maps.Marker({
-                position: oldN,
-                map: map,
-                title: 'Hello World!'
-            });
-            
 
             infoWindow = new google.maps.InfoWindow;
 
@@ -160,36 +139,11 @@
     </script>
     <!-- **** Welcome Maps Area End **** -->
     <!-- **** Submission Box **** -->
-    <div id="submitCalendar">
-        <fieldset id='submission'>
-            <legend>Event Details</legend>
-            <p>
-                <label>Date and Time</label><br>
-                <input type="text" id="datetime12" data-format="DD-MM-YYYY h:mm a" data-template="DD / MM / YYYY
-    	        hh : mm a" name="datetime" placeholder="DD-MM-YYYY h:mm a">
-                <script>
-                    $(function () {
-                        $('#datetime12').combodate();
-                    });
-                </script>
-            </p>
-            <p>
-                <label>Location</label><br>
-                <input type='text' id='location' placeholder='Street Intersection'>
-            </p>
-            <p>
-                <label>Special Instructions</label><br>
-                <input type='text' id='instructions' placeholder='Landmarks'>
-            </p>
-            <button id='submit'>Submit</button>
-            
-        </fieldset>
-
-        <!-- **** Submission Box End **** -->
-        <!-- **** Calendar **** -->
-        <div class="formbox">
-            <iframe src="https://calendar.google.com/calendar/embed?src=en.usa%23holiday%40group.v.calendar.google.com&ctz=America%2FNew_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no" text-align='center'></iframe>
-        </div>
+    <div id="submission">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfg7N8QTKl_Ubdr_aI3dPYzTLSALRCN6yLDhj0G4yjO-L2pnw/viewform?embedded=true" width="600" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+    </div>
+    <div id="formbox">
+        <iframe src="https://calendar.google.com/calendar/embed?src=en.usa%23holiday%40group.v.calendar.google.com&ctz=America%2FNew_York" style="border: 0" width="600" height="800" frameborder="0" scrolling="no" text-align='center'></iframe>
     </div>
     <!-- **** Calendar End **** -->
     <!-- **** Sale area Start **** -->
@@ -235,7 +189,7 @@
                                 <p>Time: <span>11:00AM - 3:00PM</span></p>
                             </div>
                         </div>
-                        
+
                         <!-- Property Price -->
                         <div class="property-price">
                             <p class="badge-rent">RSVP</p>
@@ -279,8 +233,8 @@
 
                         <!-- Property Price -->
                         <div class="property-price">
-                            <p class="badge-sale">RSVP</p>
-                            <p class="price">Pay as you Wish</p>
+                            <p class="badge-sale">For Rent</p>
+                            <p class="price">$2,120.000</p>
                         </div>
                     </div>
                 </div>
@@ -368,8 +322,8 @@
 
                         <!-- Property Price -->
                         <div class="property-price">
-                            <p class="badge-sale">RSVP</p>
-                            <p class="price">Donation</p>
+                            <p class="badge-sale">For Rent</p>
+                            <p class="price">$2,120.000</p>
                         </div>
                     </div>
                 </div>
@@ -402,7 +356,7 @@
                             </div>
                             <!-- Property Info -->
                             <div class="property-info-area d-flex flex-wrap">
-                                <p>Products: <span>Tomatoes, Onions</span></p>
+                                <p>Products: <span>Vegetables</span></p>
                                 <p>Date <span>05/10/19</span></p>
                                 <p>Time: <span>6:00PM - 9:00PM</span></p>
                                 <p>Distance: <span>.2 Miles</span></p>
@@ -411,8 +365,8 @@
 
                         <!-- Property Price -->
                         <div class="property-price">
-                            <p class="badge-sale">RSVP</p>
-                            <p class="price">Donation</p>
+                            <p class="badge-sale">For Rent</p>
+                            <p class="price">$2,120.000</p>
                         </div>
                     </div>
                 </div>
@@ -440,7 +394,7 @@
                                 <!-- Seller -->
                                 <div class="property-seller">
                                     <p>Business:</p>
-                                    <h6>Grocery Store/Deli</h6>
+                                    <h6>Grocey Store/Deli</h6>
                                 </div>
                             </div>
                             <!-- Property Info -->
@@ -454,8 +408,8 @@
 
                         <!-- Property Price -->
                         <div class="property-price">
-                            <p class="badge-rent">RSVP</p>
-                            <p class="price">Volunteer</p>
+                            <p class="badge-rent">For Rent</p>
+                            <p class="price">$1,599/month</p>
                         </div>
                     </div>
                 </div>
@@ -549,13 +503,24 @@
                             <p>
                                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                                 Copyright &copy;
-                                <script>document.write(new Date().getFullYear());</script> All rights reserved | This website example was made for the <a href="http://phillycodefest.com/">Philly Codefest 2019</a>
+                                <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
                                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                             </p>
                         </div>
                     </div>
 
-                    
+                    <!-- Footer Menu -->
+                    <div class="col-12 col-sm-6">
+                        <div class="footer-menu">
+                            <ul class="nav">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Properties</a></li>
+                                <li><a href="#">Agents</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
