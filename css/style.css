@@ -1156,4 +1156,37 @@ text-shadow: none;
 		font-size: 2em;
 	}
 
+	#submission{
+		text-align: center;
+	}
 	
+	#datetime12{
+		outline: none;
+		border-top: 0px;
+		border-left: 0px;
+		border-right: 0px;
+	}
+	
+	#location{
+		outline: none;
+		text-align: center;
+		border-top: 0px;
+		border-left: 0px;
+		border-right: 0px;
+	}
+	
+	#instructions{
+		
+		outline: none;
+		border-top: 0px;
+		border-left: 0px;
+		border-right: 0px;
+		width: 300px;
+		height: 150px;
+		padding: 12px 20px;
+  		box-sizing: border-box;
+  		border: 2px solid #ccc;
+  		border-radius: 4px;
+  		background-color: #f8f8f8;
+  		resize: none;
+	}
