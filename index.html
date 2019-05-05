@@ -139,35 +139,11 @@
     </script>
     <!-- **** Welcome Maps Area End **** -->
     <!-- **** Submission Box **** -->
-    <div id="submitCalendar">
-        <fieldset id='submission'>
-            <legend>Event Details</legend>
-            <p>
-                <label>Date and Time</label><br>
-                <input type="text" id="datetime12" data-format="DD-MM-YYYY h:mm a" data-template="DD / MM / YYYY
-    	        hh : mm a" name="datetime" placeholder="DD-MM-YYYY h:mm a">
-                <script>
-                    $(function () {
-                        $('#datetime12').combodate();
-                    });
-                </script>
-            </p>
-            <p>
-                <label>Location</label><br>
-                <input type='text' id='location' placeholder='Street Intersection'>
-            </p>
-            <p>
-                <label>Special Instructions</label><br>
-                <input type='text' id='instructions' placeholder='Landmarks'>
-            </p>
-            <button id='submit'>Submit</button>
-        </fieldset>
-
-        <!-- **** Submission Box End **** -->
-        <!-- **** Calendar **** -->
-        <div class="formbox">
-            <iframe src="https://calendar.google.com/calendar/embed?src=en.usa%23holiday%40group.v.calendar.google.com&ctz=America%2FNew_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no" align='center'></iframe>
-        </div>
+    <div id="submission">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfg7N8QTKl_Ubdr_aI3dPYzTLSALRCN6yLDhj0G4yjO-L2pnw/viewform?embedded=true" width="600" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+    </div>
+    <div id="formbox">
+        <iframe src="https://calendar.google.com/calendar/embed?src=en.usa%23holiday%40group.v.calendar.google.com&ctz=America%2FNew_York" style="border: 0" width="600" height="800" frameborder="0" scrolling="no" text-align='center'></iframe>
     </div>
     <!-- **** Calendar End **** -->
     <!-- **** Sale area Start **** -->
