@@ -2860,8 +2860,7 @@ input:invalid {
 /*# Additions*/
 .w3-blue, .w3-hover-blue:hover {
     color: #fff !important;
-    background-color: #2196F3 !important;
-    padding: -10px
+    background-color: #2196F3 !important
 }
 .w3-yellow, .w3-hover-yellow:hover {
     color: #000 !important;
