@@ -1192,6 +1192,9 @@ text-shadow: none;
 		border: none;
 		
 	}
+	#calform{
+		display: inline-block;
+	}
 
 	
 	
