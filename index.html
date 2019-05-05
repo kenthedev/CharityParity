@@ -83,6 +83,9 @@
             var FreshGrocer = { lat: 39.954411, lng: -75.203018 }
             var TraderJoes = { lat: 39.954250, lng: -75.176361 }
             var ElTaco = { lat: 39.960650, lng: -75.189180 }
+            var sabrinas = { lat: 39.957851, lng: -75.191048 }
+            var drexelP = { lat: 39.957958, lng: -75.188927 }
+            var oldN = { lat: 39.963089, lng: -75.202232 }
             map = new google.maps.Map(document.getElementById('map'), {
                 center: { lat: 95.7129, lng: 37.0902 },
                 zoom: 15
@@ -102,6 +105,21 @@
 
             var marker = new google.maps.Marker({
                 position: ElTaco,
+                map: map,
+                title: 'Hello World!'
+            });
+            var marker = new google.maps.Marker({
+                position: sabrinas,
+                map: map,
+                title: 'Hello World!'
+            });
+            var marker = new google.maps.Marker({
+                position: drexelP,
+                map: map,
+                title: 'Hello World!'
+            });
+            var marker = new google.maps.Marker({
+                position: oldN,
                 map: map,
                 title: 'Hello World!'
             });
@@ -142,9 +160,8 @@
     <div id="calform">
     <div id="submission">
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfg7N8QTKl_Ubdr_aI3dPYzTLSALRCN6yLDhj0G4yjO-L2pnw/viewform?embedded=true" width="600" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
-    </div>
-    <div id="formbox">
-        <iframe src="https://calendar.google.com/calendar/embed?src=en.usa%23holiday%40group.v.calendar.google.com&ctz=America%2FNew_York" style="border: 0" width="600" height="800" frameborder="0" scrolling="no" text-align='center'></iframe>
+    
+        <iframe src="https://calendar.google.com/calendar/embed?src=en.usa%23holiday%40group.v.calendar.google.com&ctz=America%2FNew_York" style="border: 0" width=910 height="800" frameborder="0" scrolling="no" text-align='center'></iframe>
     </div>
     </div>
     <!-- **** Calendar End **** -->
@@ -235,8 +252,8 @@
 
                         <!-- Property Price -->
                         <div class="property-price">
-                            <p class="badge-sale">For Rent</p>
-                            <p class="price">$2,120.000</p>
+                            <p class="badge-sale">Donation</p>
+                            <p class="price">Free</p>
                         </div>
                     </div>
                 </div>
@@ -324,8 +341,8 @@
 
                         <!-- Property Price -->
                         <div class="property-price">
-                            <p class="badge-sale">For Rent</p>
-                            <p class="price">$2,120.000</p>
+                            <p class="badge-sale">RSVP</p>
+                            <p class="price">Free</p>
                         </div>
                     </div>
                 </div>
@@ -367,8 +384,8 @@
 
                         <!-- Property Price -->
                         <div class="property-price">
-                            <p class="badge-sale">For Rent</p>
-                            <p class="price">$2,120.000</p>
+                            <p class="badge-sale">RSVP</p>
+                            <p class="price">Free</p>
                         </div>
                     </div>
                 </div>
@@ -410,8 +427,8 @@
 
                         <!-- Property Price -->
                         <div class="property-price">
-                            <p class="badge-rent">For Rent</p>
-                            <p class="price">$1,599/month</p>
+                            <p class="badge-rent">RSVP</p>
+                            <p class="price">Free</p>
                         </div>
                     </div>
                 </div>
@@ -486,7 +503,6 @@
                 </div>
 
             </div>
-        </div>
     </section>
         <!-- **** Disclaimer End **** -->
     
